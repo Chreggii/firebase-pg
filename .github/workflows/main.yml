@@ -30,7 +30,12 @@ jobs:
 
       - name: Set Environment Variable
         run: |
-          export firebaseSettings=${{ secrets.FIREBASE_SETTINGS }}
+          export firebaseProjectId=${{ secrets.FIREBASE_PROJECT_ID }}
+          export firebaseAppId=${{ secrets.FIREBASE_APP_ID}}
+          export firebaseStorageBucket=${{ secrets.FIREBASE_STORAGE_BUCKET }}
+          export firebaseApiKey=${{ secrets.FIREBASE_API_KEY }}
+          export firebaseAuthDomain=${{ secrets.FIREBASE_AUTH_DOMAIN }}
+          export firebaseMessagingSenderId=${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           ./node_modules/.bin/ng run firebase-pg:collect-vars
 
       - name: Build

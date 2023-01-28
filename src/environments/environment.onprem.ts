@@ -1,13 +1,11 @@
 export const environment = {
   production: true,
   envVar: {
-    firebaseSettings: {
-      projectId: undefined,
-      appId: undefined,
-      storageBucket: undefined,
-      apiKey: undefined,
-      authDomain: undefined,
-      messagingSenderId: undefined,
-    },
+    firebaseProjectId: undefined,
+    firebaseAppId: undefined,
+    firebaseStorageBucket: undefined,
+    firebaseApiKey: undefined,
+    firebaseAuthDomain: undefined,
+    firebaseMessagingSenderId: undefined,
   },
 };
