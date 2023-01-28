@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-pg-adced": {
+      "hosting": {
+        "firebase-pg": [
+          "fir-pg-adced"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-pg-adced"
+  }
+}

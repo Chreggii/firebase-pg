@@ -30,7 +30,7 @@ jobs:
 
       - name: Set Environment Variable
         run: |
-          export test=${{ secrets.TEST }}
+          export firebaseSettings=${{ secrets.FIREBASE_SETTINGS }}
           ./node_modules/.bin/ng run firebase-pg:collect-vars
 
       - name: Build
