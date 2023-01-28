@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { FirebaseOptions, initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,9 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() =>
-      initializeApp(environment.envVar.firebaseSettings),
-    ),
+    provideFirebaseApp(() => initializeApp(getFirebaseSetting)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
   ],
@@ -23,3 +21,12 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export const getFirebaseSetting: FirebaseOptions = {
+  projectId: environment.envVar.firebaseProjectId,
+  appId: environment.envVar.firebaseAppId,
+  storageBucket: environment.envVar.firebaseStorageBucket,
+  apiKey: environment.envVar.firebaseApiKey,
+  authDomain: environment.envVar.firebaseAuthDomain,
+  messagingSenderId: environment.envVar.firebaseMessagingSenderId,
+};

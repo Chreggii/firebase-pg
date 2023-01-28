@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { environment } from '../environments/environment';
+import { getFirebaseSetting } from './app.module';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
   constructor() {
-    console.log(environment.envVar.firebaseSettings);
+    console.log(getFirebaseSetting);
   }
 
   title = 'firebase-pg';
