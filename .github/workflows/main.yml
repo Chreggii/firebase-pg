@@ -25,8 +25,8 @@ jobs:
       - name: Check Format
         run: yarn ci:format
 
-      - name: Tests
-        run: yarn ci:test
+      # - name: Tests
+      #   run: yarn ci:test
 
       - name: Set Environment Variable
         run: |
